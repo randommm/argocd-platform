@@ -11,6 +11,10 @@ spec:
     path: charts/prometheus
     repoURL: https://github.com/prometheus-community/helm-charts.git
     targetRevision: HEAD
+    helm:
+      parameters:
+        - name: service.type
+          value: LoadBalancer
   destination:
     namespace: monitoring
     server: https://kubernetes.default.svc
