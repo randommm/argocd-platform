@@ -8,8 +8,8 @@ metadata:
 spec:
   project: production
   source:
-    path: argo-rollouts/base
-    repoURL: https://github.com/vfarcic/argo-combined-demo
+    path: argo-rollouts
+    repoURL: https://github.com/randommm/argocd-platform
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc

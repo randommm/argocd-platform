@@ -13,10 +13,10 @@ spec:
     targetRevision: HEAD
     helm:
       values: |
-        server: 
+        server:
           ingress:
             hosts:
-              - acme.com
+              - argo.20.0.160.116.nip.io
             enabled: true
             ingressClassName: nginx
         controller:

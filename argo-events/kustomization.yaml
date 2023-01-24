@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- argo-events-install.yaml
+- event-bus.yaml
+- sensor-rbac.yaml
+- validating-webhook.yaml
+- workflow-rbac.yaml
+namespace: argo-events

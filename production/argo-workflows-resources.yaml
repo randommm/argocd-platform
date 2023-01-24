@@ -8,8 +8,8 @@ metadata:
 spec:
   project: production
   source:
-    path: argo-workflows/overlays/production
-    repoURL: https://github.com/vfarcic/argo-combined-demo
+    path: argo-workflows-resources
+    repoURL: https://github.com/randommm/argocd-platform
     targetRevision: HEAD
   destination:
     namespace: argo

@@ -1,0 +1,16 @@
+# kubectl create secret generic regcred  --from-file=.dockerconfigjson=$HOME/.docker/config.json --type=kubernetes.io/dockerconfigjson -n workflows --dry-run=client --output yaml | kubeseal --format=yaml
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: regcred
+  namespace: workflows
+spec:
+  encryptedData:
+    .dockerconfigjson: AgCKcjbwxEZxtcIip3OOSpdeKBTxyQvWU72o4t6RTQcUPecfA3oByceVv2h8jXAOHked7laj+lVMN1cSvUZ/6yHDC1GS8bap6Yf3cIwcVXeSj9wHuDXTwO/eFJWVPQs4ugYXA9OaOJfS9bsSAquiROHY2BVY8GGTOyKmNW73EIeLD11gaQqypfCKr6hqf67d/YydNRrP5BexMh1lQmzlzXt40SU4B9GQkqQYONdrFzTP0INE0ECrmBH3YoHp43ReUl+cc9wohDoKa+6tTE0MyiQ8C5rTzSnYisLTF8fXPBfdCtLeo20MjhfnbwHsDoXo1wylXiV5ZqPErQ1q9h1LfB7XTVBxIXrAYJ7vxy0yZRecs3nSdwkD6/grzNnu965RQfGGOd3BZ2Iq/bHEG9wogvPn8i9OxeFPHSy1PAvQSYB1dRc2KwYFx6ZxSYhY6DZHn00L8s9Z/TYHucADrDh6uVu4h+ZC7ERcxTRYmQ3HmmeFS85BLpi9nQHzs13supw4pqgFFaOtf9gW4FeHSVysoksb/0/7FcJfekYOk12D/fLJXaWBeoTwm5g2HmqUk/d+7XtN9ODI626+SyswLEoGUpKGX2TykSB3bPdd2Qh1Svu0SXDJLnplEWtHD786kmjqJWI7aZmGW7K/KFAl2WJrqB/GE3FighuV99ycSBX84gW+mGjrthemJ/vQg20Bt4kc4E9HP+h4U2VC1G4eaTiDGx0E3Is3KvtFS/84fFlevwaEQ3iCJPX32HuHPopZth1WtU4hh2jsIbo8ll0D9Evwf3lXM7uqXTZdONDQXS8Yi/iHTepKaK9ccB/VMcFGt5RP8vrKC1JB8dMJ5VzfIFMPnN9VAJHdi2KdV5zM4yMfKaIcAMvdcqXjdEIXh9pU3O3lDxyiy2Fyq1UrKt+RpbbdJsXzhSbzpUuBwWCcHWW51sJi+RyZ5XyI2H/GKBSLarctfizI7utbVNcU1qkYnFbkhBxtNMYbRPbgPQJW3iZAp51pceQwA44arv3pztBmOqFTYMebUXeHlgQebLXwJTPnG8Uf1J8CWEYfxC3QFSKf86GDNoAC+ygLaTFKfPG+vfXhHh5HH/MoVbYpJ87CnkmMKzedMh5eHVYzif1K3XvxZzF7bMER7Tz29kOM0In0Zw==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: regcred
+      namespace: workflows
+    type: kubernetes.io/dockerconfigjson

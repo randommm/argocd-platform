@@ -8,8 +8,8 @@ metadata:
 spec:
   project: production
   source:
-    path: charts/argo-events
-    repoURL: https://github.com/argoproj/argo-helm.git
+    path: argo-events
+    repoURL: https://github.com/randommm/argocd-platform
     targetRevision: HEAD
   destination:
     namespace: argo-events
@@ -20,4 +20,5 @@ spec:
       prune: true
     syncOptions:
     - CreateNamespace=true
+
 

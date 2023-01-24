@@ -1,20 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sealed-secrets
+  name: mydjangowebsite-staging
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: production
+  project: staging
   source:
-    path: sealed-secrets
-    repoURL: https://github.com/vfarcic/argocd-production
-    targetRevision: HEAD
+    path: deploy/kustomize/overlays/staging
+    repoURL: https://github.com/randommm/mydjangowebsite
+    targetRevision: staging
   destination:
     server: https://kubernetes.default.svc
+    namespace: staging
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
-
+    syncOptions:
+    - CreateNamespace=true
