@@ -4,4 +4,4 @@
 
 <code>kubectl apply -f https://raw.githubusercontent.com/randommm/argocd-platform/master/apps.yaml</code>
 
-This repo is based on https://github.com/vfarcic/argocd-platform (which is also Apache 2 licensed).
+This repo is based on https://github.com/vfarcic/argo-combined-demo (which is also Apache 2 licensed).
